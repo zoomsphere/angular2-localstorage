@@ -6,6 +6,7 @@ export declare class Webstorable {
 }
 export declare let WEBSTORAGE_CONFIG: {
     prefix: string;
+    secretKey: string;
 };
 export declare class WebStorageModule {
 }

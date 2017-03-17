@@ -5,4 +5,6 @@ export declare class WebStorageUtility {
     static remove(storage: Storage, key: string): void;
     private static getSettable(value);
     private static getGettable(value);
+    private static encrypt(value, password);
+    private static decrypt(value, password);
 }
