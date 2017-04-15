@@ -17,7 +17,7 @@ Things that have been added in this fork:
 1. Download the library: `npm install --save git+https://github.com/zoomsphere/angular2-localstorage#master`
 2. Import the WebStorageModule in your app module:
     ```typescript
-    import {Component} from 'angular2/core';
+    import {NgModule} from '@angular/core';
     import {WebStorageModule, LocalStorageService} from 'angular2-localstorage';
 
     @NgModule({
@@ -40,7 +40,7 @@ Things that have been added in this fork:
 
 1. Use the `@LocalStorage()` and/or `@SessionStorage()` decorator functions. Here is where the magic happens, decorated variables' values will be restored from the storage when you reload the site!
     ```typescript
-    import {LocalStorage, SessionStorage} from 'angular2-localstorage/WebStorage';
+    import {LocalStorage, SessionStorage} from 'angular2-localstorage';
     
     class MySuperComponent {
         // it will be stored under ${prefix}viewCounts name
