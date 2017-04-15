@@ -42,6 +42,10 @@ Things that have been added in this fork:
     ```typescript
     import {LocalStorage, SessionStorage} from 'angular2-localstorage';
     
+    @Component({
+      selector: 'my-super',
+      templateUrl: './my-super.component.html',
+    })
     class MySuperComponent {
         // it will be stored under ${prefix}viewCounts name
         @LocalStorage() public viewCounts: number = 0;
@@ -69,6 +73,10 @@ Things that have been added in this fork:
     type WebstorableObject = Webstorable & Object; // save() method is declared in the Webstorable interface
     type WebstorableArray = Webstorable & Array<any>;
 
+    @Component({
+      selector: 'my-super',
+      templateUrl: './my-super.component.html',
+    })
     class MySuperComponent {
        @LocalStorage() someObject: WebstorableObject = <WebstorableObject>{};
        @SessionStorage() arrayOfSomethings: WebstorableArray = [0,1,2,3,4];
