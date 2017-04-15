@@ -19,7 +19,8 @@ exports.SessionStorageService = webstorage_service_2.SessionStorageService;
 var webstorage_utility_1 = require("./utility/webstorage.utility");
 exports.WebStorageUtility = webstorage_utility_1.WebStorageUtility;
 exports.WEBSTORAGE_CONFIG = {
-    prefix: 'angular2ws_'
+    prefix: 'angular2ws_',
+    secretKey: ''
 };
 var WebStorageModule = (function () {
     function WebStorageModule() {
