@@ -1,7 +1,7 @@
 # Angular2 @LocalStorage
 
-This little Angular2/typescript decorator makes it super easy to save and restore *automatically* a variable state in your
-directive (class property) using HTML5' LocalStorage.
+This little Angular/typescript decorator makes it super easy to save and restore *automatically* a variable state in your
+directive (class property) using HTML5 LocalStorage.
 
 ## What's new
 
@@ -10,13 +10,14 @@ Things that have been added in this fork:
 - support for all `Array` methods that change array object's value
 - now `WebStorageService.clear()` method removes items created by this repository only
 - storage key prefix (`angular2ws_` by default) can be customized by changing `WEBSTORAGE_CONFIG.prefix` property
+- support for Angular 4
 
 ## Installation
 
 1. Download the library: `npm install --save git+https://github.com/zoomsphere/angular2-localstorage#master`
 2. Import the WebStorageModule in your app module:
     ```typescript
-    import {Component} from 'angular2/core';
+    import {NgModule} from '@angular/core';
     import {WebStorageModule, LocalStorageService} from 'angular2-localstorage';
 
     @NgModule({
@@ -39,8 +40,12 @@ Things that have been added in this fork:
 
 1. Use the `@LocalStorage()` and/or `@SessionStorage()` decorator functions. Here is where the magic happens, decorated variables' values will be restored from the storage when you reload the site!
     ```typescript
-    import {LocalStorage, SessionStorage} from 'angular2-localstorage/WebStorage';
+    import {LocalStorage, SessionStorage} from 'angular2-localstorage';
     
+    @Component({
+      selector: 'my-super',
+      templateUrl: './my-super.component.html',
+    })
     class MySuperComponent {
         // it will be stored under ${prefix}viewCounts name
         @LocalStorage() public viewCounts: number = 0;
@@ -68,6 +73,10 @@ Things that have been added in this fork:
     type WebstorableObject = Webstorable & Object; // save() method is declared in the Webstorable interface
     type WebstorableArray = Webstorable & Array<any>;
 
+    @Component({
+      selector: 'my-super',
+      templateUrl: './my-super.component.html',
+    })
     class MySuperComponent {
        @LocalStorage() someObject: WebstorableObject = <WebstorableObject>{};
        @SessionStorage() arrayOfSomethings: WebstorableArray = [0,1,2,3,4];
