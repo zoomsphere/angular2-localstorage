@@ -1,7 +1,7 @@
 # Angular2 @LocalStorage
 
-This little Angular2/typescript decorator makes it super easy to save and restore *automatically* a variable state in your
-directive (class property) using HTML5' LocalStorage.
+This little Angular/typescript decorator makes it super easy to save and restore *automatically* a variable state in your
+directive (class property) using HTML5 LocalStorage.
 
 ## What's new
 
@@ -10,6 +10,7 @@ Things that have been added in this fork:
 - support for all `Array` methods that change array object's value
 - now `WebStorageService.clear()` method removes items created by this repository only
 - storage key prefix (`angular2ws_` by default) can be customized by changing `WEBSTORAGE_CONFIG.prefix` property
+- support for Angular 4
 
 ## Installation
 
