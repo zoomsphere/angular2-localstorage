@@ -20,7 +20,7 @@
     "SessionStorage",
     "Storage"
   ],
-  "author": "Marc J. Schmidt",
+  "author": "Daniel Kucal & Marc J. Schmidt",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zoomsphere/angular2-localstorage/issues"
